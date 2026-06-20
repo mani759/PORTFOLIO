@@ -55,7 +55,7 @@ const Hero = () => {
       <div className="relative z-10 flex justify-center items-center min-h-screen px-4 pt-26 lg:pt-0">
         <div className=" relative flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-8 max-w-[1600px] mx-auto">
           <div className="order-3 lg:order-1 flex-shrink-0 ">
-            <AnimatePresence>
+            <AnimatePresence mode="wait">
               {showContent && (
                 <motion.div
                   initial={{
@@ -71,7 +71,9 @@ const Hero = () => {
                     x: 100,
                   }}
                   transition={{
-                    duration: 0.4,
+                    type: "spring",
+                    stiffness: 120,
+                    damping: 18,
                   }}
                 >
                   <SkillCat />
@@ -103,12 +105,18 @@ const Hero = () => {
               className="w-full object-contain"
               animate={{
                 y: [0, -15, 0],
-                scale: showContent ? 1.1 : 1,
+                scale: showContent ? 1.02 : 1,
               }}
               transition={{
-                duration: 10,
-                repeat: Infinity,
-                ease: easeInOut,
+                y: {
+                  duration: 10,
+                  repeat: Infinity,
+                  ease: easeInOut,
+                },
+                scale: {
+                  duration: 0.4,
+                  ease: "easeOut",
+                },
               }}
               onMouseEnter={() =>
                 setTimeout(() => {
@@ -143,28 +151,32 @@ const Hero = () => {
           </div>
 
           <div className="order-2 lg:order-3">
-            {showContent && (
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  x: -100,
-                  rotate: -7,
-                }}
-                animate={{
-                  opacity: 1,
-                  x: 0,
-                  rotate: 0,
-                }}
-                transition={{
-                  duration: 0.6,
-                }}
-                whileTap={{
-                  scale: 0.97,
-                }}
-              >
-                <IntroCard />
-              </motion.div>
-            )}
+            <AnimatePresence mode="wait">
+              {showContent && (
+                <motion.div
+                  initial={{
+                    opacity: 0,
+                    x: -100,
+                    rotate: -7,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    x: 0,
+                    rotate: 0,
+                  }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 120,
+                    damping: 18,
+                  }}
+                  whileTap={{
+                    scale: 0.97,
+                  }}
+                >
+                  <IntroCard />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>
