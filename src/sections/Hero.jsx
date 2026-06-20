@@ -80,7 +80,7 @@ const Hero = () => {
             </AnimatePresence>
           </div>
 
-          <div className=" order-1 lg:order-2 relative flex-shrink-0 w-full max-w-[280px] md:max-w-[480px] lg:max-w-[600px]">
+          <div className=" order-1 lg:order-2 relative flex-shrink-0 w-full max-w-[280px] md:max-w-[380px] lg:max-w-[550px]">
             {showContent && (
               <motion.div
                 initial={{
