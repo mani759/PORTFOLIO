@@ -54,7 +54,7 @@ const Hero = () => {
       ></div>
       <div className="relative z-10 flex justify-center items-center min-h-screen px-4 pt-26 lg:pt-0">
         <div className=" relative flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-8 max-w-[1600px] mx-auto">
-          <div className="order-3 lg:order-1 flex-shrink-0">
+          <div className="order-3 lg:order-1  w-[500px] flex-shrink-0">
             <AnimatePresence>
               {showContent && (
                 <motion.div
