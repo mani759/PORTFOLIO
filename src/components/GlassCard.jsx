@@ -25,6 +25,9 @@ const GlassCard = ({ title, items, color, icon, index }) => {
       transition={{
         duration: 0.15,
       }}
+      whileTap={{
+        scale: 0.97,
+      }}
       className="relative overflow-hidden backdrop-blur-xl bg-white/[0.06] border border-white/10 rounded-2xl p-4 w-64 shadow-[0_8px_32px_rgba(0,0,0,0.4)] hover:border-yellow-400/30 transition-all duration-300"
     >
       <div
