@@ -46,7 +46,7 @@ const SocialLinks = () => {
       </a>
 
       <a
-        href="YOUR_INSTAGRAM_URL"
+        href="https://www.instagram.com/maniframes_00?igsh=emh6M2psc2VsOG5y"
         target="_blank"
         rel="noreferrer"
         className="
