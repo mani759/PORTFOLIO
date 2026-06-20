@@ -103,7 +103,7 @@ const Hero = () => {
               className="w-full object-contain"
               animate={{
                 y: [0, -15, 0],
-                scale: showContent ? 1.1 : 1,
+                scale: showContent ? 1.02 : 1,
               }}
               transition={{
                 duration: 10,
