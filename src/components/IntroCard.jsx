@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const IntroCard = () => {
   return (
-    <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-6 w-[500px]">
+    <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-6  w-full max-w-[500px]">
       <div>
         <h1 className="text-4xl font-bold text-white">Manikanta</h1>
 

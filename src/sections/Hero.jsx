@@ -80,7 +80,7 @@ const Hero = () => {
             </AnimatePresence>
           </div>
 
-          <div className=" order-1 lg:order-2 relative flex-shrink-0 w-[280px] md:w-[380px] lg:w-[550px]">
+          <div className=" order-1 lg:order-2 relative flex-shrink-0 w-full max-w-[280px] md:max-w-[380px] lg:max-w-[550px]">
             {showContent && (
               <motion.div
                 initial={{
@@ -103,7 +103,7 @@ const Hero = () => {
               className="w-full object-contain"
               animate={{
                 y: [0, -15, 0],
-                scale: showContent ? (window.innerWidth < 1024 ? 1 : 1.15) : 1,
+                scale: showContent ? 1.1 : 1,
               }}
               transition={{
                 duration: 10,

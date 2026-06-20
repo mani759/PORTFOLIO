@@ -38,7 +38,7 @@ const SkillCat = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-2 gap-20 w-[500px]">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-[550px]">
       {Skills.map((cat, index) => {
         return (
           <motion.div
