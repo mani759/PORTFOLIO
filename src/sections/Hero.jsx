@@ -53,8 +53,8 @@ const Hero = () => {
         }}
       ></div>
       <div className="relative z-10 flex justify-center items-center min-h-screen px-4 pt-26 lg:pt-0">
-        <div className="relative w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center gap-6 lg:gap-10 px-4 sm:px-6 overflow-x-hidden">
-          <div className="order-3 lg:order-1  w-full lg:w-[380px] xl:w-[430px] flex-shrink-0">
+        <div className=" relative flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-8 max-w-[1600px] mx-auto">
+          <div className="order-3 lg:order-1 flex-shrink-0">
             <AnimatePresence>
               {showContent && (
                 <motion.div
@@ -80,7 +80,7 @@ const Hero = () => {
             </AnimatePresence>
           </div>
 
-          <div className=" order-1 lg:order-2 relative w-full max-w-[260px] sm:max-w-[320px] md:max-w-[380px] lg:max-w-[460px] xl:max-w-[520px] flex-shrink-0">
+          <div className=" order-1 lg:order-2 relative flex-shrink-0 w-full max-w-[280px] md:max-w-[380px] lg:max-w-[550px]">
             {showContent && (
               <motion.div
                 initial={{
@@ -142,7 +142,7 @@ const Hero = () => {
             )}
           </div>
 
-          <div className="order-2 lg:order-3 w-full lg:w-[320px] xl:w-[380px] flex-shrink-0">
+          <div className="order-2 lg:order-3">
             {showContent && (
               <motion.div
                 initial={{
