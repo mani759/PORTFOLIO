@@ -42,6 +42,7 @@ const SkillCat = () => {
       {Skills.map((cat, index) => {
         return (
           <motion.div
+            key={cat.title}
             initial={{
               opacity: 0,
               scale: 0.8,

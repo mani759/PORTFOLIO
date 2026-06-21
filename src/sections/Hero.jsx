@@ -10,6 +10,7 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+import Button from "../components/Button";
 
 const Hero = () => {
   const [showContent, setShowContent] = useState(false);
@@ -145,7 +146,9 @@ const Hero = () => {
                 }}
                 className="text-yellow-300 text-sm font-medium"
               >
-                ✨ Hover to Explore
+                <span className="hidden lg:inline">✨ Hover to Explore</span>
+
+                <span className="lg:hidden">👆 Tap to Explore</span>
               </motion.p>
             )}
           </div>
@@ -171,6 +174,10 @@ const Hero = () => {
                   }}
                   whileTap={{
                     scale: 0.97,
+                  }}
+                  whileHover={{
+                    y: -8,
+                    scale: 1.1,
                   }}
                 >
                   <IntroCard />

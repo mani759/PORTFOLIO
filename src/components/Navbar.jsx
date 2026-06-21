@@ -29,7 +29,7 @@ const Navbar = () => {
           </a>
         </div>
         <div>
-          <Button />
+          <Button text="Contact Me" />
         </div>
       </div>
     </nav>

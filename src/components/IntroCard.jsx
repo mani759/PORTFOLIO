@@ -1,10 +1,12 @@
+import { button } from "framer-motion/client";
 import SocialLinks from "./SocialLinks";
 import { motion } from "framer-motion";
+import Button from "./Button";
 
 const IntroCard = () => {
   return (
     <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl p-6  w-full max-w-[500px]">
-      <div>
+      <div className="gap-5">
         <h1 className="text-4xl font-bold text-white">Manikanta</h1>
 
         <p className="text-yellow-400 mt-2">AIML Student</p>
@@ -30,6 +32,13 @@ const IntroCard = () => {
           }}
         >
           <SocialLinks />
+          <motion.div
+            whileTap={{ scale: 0.9 }}
+            transition={{ duration: 0.4 }}
+            className="mt-5"
+          >
+            <Button text=" 📄 My Resume" />
+          </motion.div>
         </motion.div>
       </div>
     </div>
