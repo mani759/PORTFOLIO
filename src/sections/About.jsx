@@ -191,7 +191,7 @@ const About = () => {
               delay: 1.0,
               duration: 0.6,
             }}
-            className="absolute bottom-0 left-1/2 -translate-x-1/2"
+            className="absolute bottom-[17%] left-1/2 -translate-x-1/2"
           >
             <OrbitCard
               title="Card 6"
