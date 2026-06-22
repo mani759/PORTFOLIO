@@ -45,15 +45,71 @@ const About = () => {
             -translate-x-1/2
             -translate-y-1/2
 
+            w-[800px]
+            h-[800px]
+
+            rounded-full
+
+            border
+            border-yellow-400/30
+            border-dashed
+  "
+          />
+          <motion.div
+            animate={{
+              rotate: 360,
+            }}
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="
+            absolute
+            left-1/2
+            top-[48%]
+
+            -translate-x-1/2
+            -translate-y-1/2
+
             w-[650px]
             h-[650px]
 
             rounded-full
 
             border
-            border-yellow-400
+            border-yellow-400/30
+            border-dashed
   "
           />
+          <motion.div
+            animate={{
+              rotate: 360,
+            }}
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="
+            absolute
+            left-1/2
+            top-[48%]
+
+            -translate-x-1/2
+            -translate-y-1/2
+
+            w-[400px]
+            h-[400px]
+
+            rounded-full
+
+            border
+            border-yellow-400/30
+            border-dashed
+  "
+          />
+
           <motion.div
             initial={{
               opacity: 0,
