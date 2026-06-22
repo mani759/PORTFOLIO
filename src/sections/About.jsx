@@ -25,7 +25,7 @@ const About = () => {
       </div>
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
         <div className="  absolute   inset-0  flex   items-center  justify-center pointer-events-none  select-none">
-          <h1 className=" text-yellow-50  text-yellow-200/20 text-[180px]  md:text-[15rem]   font-bold tracking-tight   ">
+          <h1 className=" text-yellow-50  text-yellow-200/20 text-[180px]  md:text-[20rem]   font-bold tracking-tight   ">
             WHY ME
           </h1>
         </div>
