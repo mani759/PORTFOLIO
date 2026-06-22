@@ -153,11 +153,23 @@ const About = () => {
             }}
             className="absolute top-[5%] left-1/2 -translate-x-1/2"
           >
-            <OrbitCard
-              title="Card 1"
-              description="Placeholder text"
-              color="cyan"
-            />
+            <motion.div
+              animate={{
+                y: [0, -10, 0],
+                x: [0, 4, 0],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <OrbitCard
+                title="Card 1"
+                description="Placeholder text"
+                color="cyan"
+              />
+            </motion.div>
           </motion.div>
           <motion.div
             initial={{
@@ -177,11 +189,23 @@ const About = () => {
             }}
             className="absolute top-[18%] left-0"
           >
-            <OrbitCard
-              title="Card 2"
-              description="Placeholder text"
-              color="purple"
-            />
+            <motion.div
+              animate={{
+                y: [0, -8, 0],
+                x: [0, -6, 0],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <OrbitCard
+                title="Card 2"
+                description="Placeholder text"
+                color="purple"
+              />
+            </motion.div>
           </motion.div>
 
           <motion.div
@@ -202,11 +226,23 @@ const About = () => {
             }}
             className="absolute top-[18%] right-0"
           >
-            <OrbitCard
-              title="Card 3"
-              description="Placeholder text"
-              color="emerald"
-            />
+            <motion.div
+              animate={{
+                y: [0, -10, 0],
+                x: [0, 5, 0],
+              }}
+              transition={{
+                duration: 4.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <OrbitCard
+                title="Card 3"
+                description="Placeholder text"
+                color="emerald"
+              />
+            </motion.div>
           </motion.div>
 
           <motion.div
@@ -227,11 +263,23 @@ const About = () => {
             }}
             className="absolute bottom-[18%] left-0"
           >
-            <OrbitCard
-              title="Card 4"
-              description="Placeholder text"
-              color="amber"
-            />
+            <motion.div
+              animate={{
+                y: [0, -14, 0],
+                x: [0, -4, 0],
+              }}
+              transition={{
+                duration: 6,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <OrbitCard
+                title="Card 4"
+                description="Placeholder text"
+                color="amber"
+              />
+            </motion.div>
           </motion.div>
           <div></div>
           <motion.div
@@ -252,11 +300,23 @@ const About = () => {
             }}
             className="absolute bottom-[18%] right-0"
           >
-            <OrbitCard
-              title="Card 5"
-              description="Placeholder text"
-              color="rose"
-            />
+            <motion.div
+              animate={{
+                y: [0, -7, 0],
+                x: [0, 6, 0],
+              }}
+              transition={{
+                duration: 5.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <OrbitCard
+                title="Card 5"
+                description="Placeholder text"
+                color="rose"
+              />
+            </motion.div>
           </motion.div>
 
           <motion.div
@@ -277,11 +337,22 @@ const About = () => {
             }}
             className="absolute bottom-[17%] left-1/2 -translate-x-1/2"
           >
-            <OrbitCard
-              title="Card 6"
-              description="Placeholder text"
-              color="blue"
-            />
+            <motion.div
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{
+                duration: 4.2,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              <OrbitCard
+                title="Card 6"
+                description="Placeholder text"
+                color="blue"
+              />
+            </motion.div>
           </motion.div>
         </div>
       </div>
