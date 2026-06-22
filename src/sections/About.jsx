@@ -99,12 +99,43 @@ const About = () => {
           enablePost
         />
       </div>
-      <div className="  absolute   inset-0  gap-75   flex   items-center  justify-center pointer-events-none  select-none">
+      <div className="   hidden lg:flex absolute   inset-0  gap-75   flex   items-center  justify-center pointer-events-none  select-none">
         <h1 className=" text-yellow-50  text-yellow-200/20 text-[180px]  md:text-[19rem]   font-bold tracking-tight   ">
           WHY
         </h1>
         <h1 className=" text-yellow-50  text-yellow-200/20 text-[180px]  md:text-[19rem]   font-bold tracking-tight   ">
           ME
+        </h1>
+      </div>
+      {/* for mobile */}
+      <div
+        className="
+          lg:hidden
+
+          absolute
+          top-2
+          
+          left-1/2
+
+          -translate-x-1/2
+
+          pointer-events-none
+          select-none
+
+          z-0
+                      "
+      >
+        <h1
+          className="
+                  text-7xl
+                  font-black
+
+                  text-yellow-200/10
+
+                  whitespace-nowrap
+                "
+        >
+          WHY ME
         </h1>
       </div>
       <div className=" relative z-10 max-w-6xl mx-auto px-6 py-24">
@@ -274,10 +305,31 @@ const About = () => {
             </motion.div>
           ))}
         </motion.div>
-        <div className="lg:hidden relative z-10 max-w-md mx-auto">
-          <CenterCard />
+        {/* for mobile */}
 
-          <div className="mt-8 space-y-4">
+        <div className="lg:hidden mt-10 relative z-10 max-w-md mx-auto">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 50,
+              scale: 0.9,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+            }}
+            viewport={{
+              amount: 0.2,
+            }}
+            transition={{
+              duration: 0.6,
+            }}
+          >
+            <CenterCard />
+          </motion.div>
+
+          <div className=" flex flex-col items-center mt-8 space-y-4">
             {whyMeCards.map((card, index) => (
               <motion.div
                 key={card.title}
