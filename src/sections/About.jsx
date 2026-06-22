@@ -14,7 +14,7 @@ const About = () => {
         </>
       ),
       color: "cyan",
-      position: "top-[5%] left-1/2 -translate-x-1/2",
+      position: "top-0 left-1/2 -translate-x-1/2",
     },
 
     {
@@ -77,7 +77,7 @@ const About = () => {
         </>
       ),
       color: "blue",
-      position: "bottom-[17%] left-1/2 -translate-x-1/2",
+      position: "bottom-0 left-1/2 -translate-x-1/2",
     },
   ];
   return (

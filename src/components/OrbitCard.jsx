@@ -50,63 +50,17 @@ const OrbitCard = ({ title, description, color = "cyan", className = "" }) => {
       transition={{
         duration: 0.3,
       }}
-      className={`
-        w-[90vw] max-w-[340px] lg:w-[220px] min-h-[140px]
-       
-        relative
-        overflow-hidden
-
-        rounded-2xl
-        border ${style.border}
-        bg-white/[0.03]
-        backdrop-blur-xl
-
-        p-5
-
-        transition-all
-        duration-500
-
-        hover:border-cyan-400/30
-        hover:bg-white/[0.05]
-
-        ${className}
-      `}
+      className={`  w-[90vw] max-w-[340px] lg:w-[220px] min-h-[140px]    relative overflow-hidden rounded-2xl  border ${style.border} bg-white/[0.03]   backdrop-blur-xl
+         p-5  transition-all  duration-500 hover:border-cyan-400/30 hover:bg-white/[0.05] ${className}  `}
     >
       <div
-        className={`
-        absolute
-        inset-0
-
-        blur-3xl
-        opacity-40
-
-        ${style.glow}
-         `}
+        className={`  absolute inset-0 blur-3xl  opacity-40  ${style.glow}`}
       />
-      <div
-        className="
-        absolute
-        top-0
-        left-0
-        w-full
-        h-px
 
-        bg-gradient-to-r
-        from-transparent
-        via-white/50
-        to-transparent
-    "
-      />
+      <div className=" absolute   top-0 left-0  w-full  h-px  bg-gradient-to-r from-transparent  via-white/50  to-transparent  " />
+
       <div className="relative z-10 flex flex-col h-full">
-        <div
-          className={`
-      w-2
-      h-2
-      rounded-full
-      ${style.dot}
-      mb-3
-    `}
-        />
+        <div className={` w-2  h-2 rounded-full  ${style.dot}  mb-3  `} />
 
         <h3 className="text-base md:text-lg font-bold tracking-tight text-white leading-tight mb-3">
           {title}
