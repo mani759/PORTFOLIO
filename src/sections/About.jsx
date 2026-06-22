@@ -23,11 +23,37 @@ const About = () => {
           enablePost
         />
       </div>
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
         <h2 className="text-white font-bold flex justify-center text-3xl mt-0">
           Why Me
         </h2>
         <div className="relative w-[1000px]  h-[750px]   mx-auto">
+          <motion.div
+            animate={{
+              rotate: 360,
+            }}
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="
+            absolute
+            left-1/2
+            top-[48%]
+
+            -translate-x-1/2
+            -translate-y-1/2
+
+            w-[650px]
+            h-[650px]
+
+            rounded-full
+
+            border
+            border-yellow-400
+  "
+          />
           <motion.div
             initial={{
               opacity: 0,
@@ -42,12 +68,12 @@ const About = () => {
               duration: 0.8,
             }}
             className="
-    absolute
-    left-1/2
-    top-[45%]
-    -translate-x-1/2
-    -translate-y-1/2
-  "
+              absolute
+              left-1/2
+              top-[45%]
+              -translate-x-1/2
+              -translate-y-1/2
+            "
           >
             <CenterCard />
           </motion.div>
