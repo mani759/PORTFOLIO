@@ -23,7 +23,7 @@ const About = () => {
           enablePost
         />
       </div>
-      <div className="  absolute   inset-0   gap-100 flex   items-center  justify-center pointer-events-none  select-none">
+      <div className="  absolute   inset-0  p-10 gap-100 flex   items-center  justify-center pointer-events-none  select-none">
         <h1 className=" text-yellow-50  text-yellow-200/20 text-[180px]  md:text-[20rem]   font-bold tracking-tight   ">
           WHY
         </h1>
