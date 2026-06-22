@@ -27,7 +27,7 @@ const About = () => {
         <h2 className="text-white font-bold flex justify-center text-3xl mt-0">
           Why Me
         </h2>
-        <div className="relative w-[900px]  h-[650px]   mx-auto">
+        <div className="relative w-[800px]  h-[650px]   mx-auto">
           <motion.div
             initial={{
               opacity: 0,
