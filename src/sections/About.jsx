@@ -7,44 +7,75 @@ const About = () => {
   const whyMeCards = [
     {
       title: "Curiosity",
-      description:
-        "Most projects start with a simple question: 'What if I try this?'",
+      description: (
+        <>
+          Most projects start with a simple question:
+          <span className="text-cyan-400">'What if I try this?'</span>
+        </>
+      ),
       color: "cyan",
       position: "top-[5%] left-1/2 -translate-x-1/2",
     },
 
     {
       title: "Self-Taught Mindset",
-      description: "Learning by building, breaking, fixing, and repeating.",
+      description: (
+        <>
+          Learning by building,{" "}
+          <span className="text-violet-400">breaking</span>, fixing, and
+          repeating.
+        </>
+      ),
       color: "purple",
       position: "top-[18%] left-0",
     },
 
     {
       title: "AI Explorer",
-      description: "Exploring how intelligence and software can work together.",
+      description: (
+        <>
+          Exploring how <span className="text-emerald-400">intelligence</span>{" "}
+          and software can work together.
+        </>
+      ),
       color: "emerald",
       position: "top-[18%] right-0",
     },
 
     {
       title: "Builder",
-      description:
-        "Turning ideas into websites, tools, and real-world projects.",
+      description: (
+        <>
+          {" "}
+          Turning ideas into websites, tools, and{" "}
+          <span className="text-amber-300">real-world</span> projects.
+        </>
+      ),
       color: "amber",
       position: "bottom-[18%] left-0",
     },
 
     {
       title: "Creative Thinker",
-      description: "Balancing functionality, design, and user experience.",
+      description: (
+        <>
+          Balancing functionality, <span className="text-rose-400">design</span>
+          , and user experience.
+        </>
+      ),
       color: "rose",
       position: "bottom-[18%] right-0",
     },
 
     {
       title: "Growth",
-      description: "One project better than the last. That's the goal.",
+      description: (
+        <>
+          One project{" "}
+          <span className="text-blue-400">better than the last</span>better than
+          the last. That's the goal.
+        </>
+      ),
       color: "blue",
       position: "bottom-[17%] left-1/2 -translate-x-1/2",
     },
