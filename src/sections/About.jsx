@@ -29,7 +29,25 @@ const About = () => {
             Why Me
           </h2>
         </div>
-        <div className="relative w-[1000px]  h-[750px]   mx-auto">
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 100,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: false,
+            amount: 0.2,
+          }}
+          transition={{
+            duration: 1,
+            ease: "easeOut",
+          }}
+          className="relative w-[1000px] h-[750px] mx-auto"
+        >
           <motion.div
             animate={{
               rotate: 360,
@@ -293,7 +311,7 @@ const About = () => {
               y: 0,
               scale: 1,
             }}
-            viewport={{ once: true }}
+            viewport={{ amount: 0.3 }}
             transition={{
               delay: 0.0,
               duration: 0.6,
@@ -354,7 +372,7 @@ const About = () => {
               />
             </motion.div>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

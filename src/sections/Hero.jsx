@@ -187,6 +187,21 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          w-full
+          h-40
+          z-20
+
+          bg-gradient-to-b
+          from-transparent
+          via-black/60
+          to-black
+        "
+      />
     </section>
   );
 };
