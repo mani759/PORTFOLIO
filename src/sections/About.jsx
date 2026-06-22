@@ -4,6 +4,51 @@ import OrbitCard from "../components/OrbitCard";
 import CenterCard from "../components/CenterCard";
 import { motion } from "framer-motion";
 const About = () => {
+  const whyMeCards = [
+    {
+      title: "Curiosity",
+      description:
+        "Most projects start with a simple question: 'What if I try this?'",
+      color: "cyan",
+      position: "top-[5%] left-1/2 -translate-x-1/2",
+    },
+
+    {
+      title: "Self-Taught Mindset",
+      description: "Learning by building, breaking, fixing, and repeating.",
+      color: "purple",
+      position: "top-[18%] left-0",
+    },
+
+    {
+      title: "AI Explorer",
+      description: "Exploring how intelligence and software can work together.",
+      color: "emerald",
+      position: "top-[18%] right-0",
+    },
+
+    {
+      title: "Builder",
+      description:
+        "Turning ideas into websites, tools, and real-world projects.",
+      color: "amber",
+      position: "bottom-[18%] left-0",
+    },
+
+    {
+      title: "Creative Thinker",
+      description: "Balancing functionality, design, and user experience.",
+      color: "rose",
+      position: "bottom-[18%] right-0",
+    },
+
+    {
+      title: "Growth",
+      description: "One project better than the last. That's the goal.",
+      color: "blue",
+      position: "bottom-[17%] left-1/2 -translate-x-1/2",
+    },
+  ];
   return (
     <section id="about" className="relative min-h-screen   overflow-hidden">
       <div className="absolute inset-0 opacity-30">
@@ -156,225 +201,47 @@ const About = () => {
           >
             <CenterCard />
           </motion.div>
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: -40,
-              scale: 0.8,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }}
-            viewport={{ once: true }}
-            transition={{
-              delay: 0.3,
-              duration: 0.6,
-            }}
-            className="absolute top-[5%] left-1/2 -translate-x-1/2"
-          >
+          {whyMeCards.map((card, index) => (
             <motion.div
-              animate={{
-                y: [0, -10, 0],
-                x: [0, 4, 0],
+              key={card.title}
+              initial={{
+                opacity: 0,
+                y: -40,
+                scale: 0.8,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                scale: 1,
+              }}
+              viewport={{
+                once: false,
+                amount: 0.3,
               }}
               transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "easeInOut",
+                delay: index * 0.15,
+                duration: 0.6,
               }}
+              className={`absolute ${card.position}`}
             >
-              <OrbitCard
-                title="Card 1"
-                description="Placeholder text"
-                color="cyan"
-              />
+              <motion.div
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 4 + index,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                <OrbitCard
+                  title={card.title}
+                  description={card.description}
+                  color={card.color}
+                />
+              </motion.div>
             </motion.div>
-          </motion.div>
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: -40,
-              scale: 0.8,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }}
-            viewport={{ once: true }}
-            transition={{
-              delay: 0.5,
-              duration: 0.6,
-            }}
-            className="absolute top-[18%] left-0"
-          >
-            <motion.div
-              animate={{
-                y: [0, -8, 0],
-                x: [0, -6, 0],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <OrbitCard
-                title="Card 2"
-                description="Placeholder text"
-                color="purple"
-              />
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: -40,
-              scale: 0.8,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }}
-            viewport={{ once: true }}
-            transition={{
-              delay: 0.7,
-              duration: 0.6,
-            }}
-            className="absolute top-[18%] right-0"
-          >
-            <motion.div
-              animate={{
-                y: [0, -10, 0],
-                x: [0, 5, 0],
-              }}
-              transition={{
-                duration: 4.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <OrbitCard
-                title="Card 3"
-                description="Placeholder text"
-                color="emerald"
-              />
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: -40,
-              scale: 0.8,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }}
-            viewport={{ once: true }}
-            transition={{
-              delay: 0.9,
-              duration: 0.6,
-            }}
-            className="absolute bottom-[18%] left-0"
-          >
-            <motion.div
-              animate={{
-                y: [0, -14, 0],
-                x: [0, -4, 0],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <OrbitCard
-                title="Card 4"
-                description="Placeholder text"
-                color="amber"
-              />
-            </motion.div>
-          </motion.div>
-          <div></div>
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: -40,
-              scale: 0.8,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }}
-            viewport={{ amount: 0.3 }}
-            transition={{
-              delay: 0.0,
-              duration: 0.6,
-            }}
-            className="absolute bottom-[18%] right-0"
-          >
-            <motion.div
-              animate={{
-                y: [0, -7, 0],
-                x: [0, 6, 0],
-              }}
-              transition={{
-                duration: 5.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <OrbitCard
-                title="Card 5"
-                description="Placeholder text"
-                color="rose"
-              />
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: -40,
-              scale: 0.8,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-              scale: 1,
-            }}
-            viewport={{ once: true }}
-            transition={{
-              delay: 1.0,
-              duration: 0.6,
-            }}
-            className="absolute bottom-[17%] left-1/2 -translate-x-1/2"
-          >
-            <motion.div
-              animate={{
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 4.2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <OrbitCard
-                title="Card 6"
-                description="Placeholder text"
-                color="blue"
-              />
-            </motion.div>
-          </motion.div>
+          ))}
         </motion.div>
       </div>
     </section>
