@@ -107,7 +107,7 @@ const About = () => {
           ME
         </h1>
       </div>
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
+      <div className=" relative z-10 max-w-6xl mx-auto px-6 py-24">
         <motion.div
           initial={{
             opacity: 0,
@@ -125,7 +125,7 @@ const About = () => {
             duration: 1,
             ease: "easeOut",
           }}
-          className="relative w-[1000px] h-[750px] mx-auto"
+          className="hidden lg:block relative w-[1000px] h-[750px] mx-auto"
         >
           <motion.div
             animate={{
@@ -274,6 +274,38 @@ const About = () => {
             </motion.div>
           ))}
         </motion.div>
+        <div className="lg:hidden relative z-10 max-w-md mx-auto">
+          <CenterCard />
+
+          <div className="mt-8 space-y-4">
+            {whyMeCards.map((card, index) => (
+              <motion.div
+                key={card.title}
+                initial={{
+                  opacity: 0,
+                  y: 40,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  amount: 0.2,
+                }}
+                transition={{
+                  delay: index * 0.1,
+                  duration: 0.5,
+                }}
+              >
+                <OrbitCard
+                  title={card.title}
+                  description={card.description}
+                  color={card.color}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
