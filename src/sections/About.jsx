@@ -23,11 +23,11 @@ const About = () => {
           enablePost
         />
       </div>
-      <div className="  absolute   inset-0  gap-75 flex   items-center  justify-center pointer-events-none  select-none">
-        <h1 className=" text-yellow-50  text-yellow-200/20 text-[180px]  md:text-[20rem]   font-bold tracking-tight   ">
+      <div className="  absolute   inset-0  gap-75   flex   items-center  justify-center pointer-events-none  select-none">
+        <h1 className=" text-yellow-50  text-yellow-200/20 text-[180px]  md:text-[19rem]   font-bold tracking-tight   ">
           WHY
         </h1>
-        <h1 className=" text-yellow-50  text-yellow-200/20 text-[180px]  md:text-[20rem]   font-bold tracking-tight   ">
+        <h1 className=" text-yellow-50  text-yellow-200/20 text-[180px]  md:text-[19rem]   font-bold tracking-tight   ">
           ME
         </h1>
       </div>
