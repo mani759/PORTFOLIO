@@ -51,9 +51,8 @@ const OrbitCard = ({ title, description, color = "cyan", className = "" }) => {
         duration: 0.3,
       }}
       className={`
-        w-[220px]
-        md:w-[200px]
-        min-h-[130px]
+        w-[90vw] max-w-[340px] lg:w-[220px] min-h-[140px]
+       
         relative
         overflow-hidden
 
@@ -62,7 +61,7 @@ const OrbitCard = ({ title, description, color = "cyan", className = "" }) => {
         bg-white/[0.03]
         backdrop-blur-xl
 
-        p-4
+        p-5
 
         transition-all
         duration-500
@@ -98,24 +97,23 @@ const OrbitCard = ({ title, description, color = "cyan", className = "" }) => {
         to-transparent
     "
       />
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col h-full">
         <div
           className={`
       w-2
       h-2
       rounded-full
       ${style.dot}
+      mb-3
     `}
         />
 
-        <h3 className="text-sm md:text-base font-semibold text-white leading-tight">
+        <h3 className="text-base md:text-lg font-bold tracking-tight text-white leading-tight mb-3">
           {title}
         </h3>
 
         {description && (
-          <p className="mt-2 text-xs md:text-sm text-zinc-400 leading-relaxed">
-            {description}
-          </p>
+          <p className="text-sm text-zinc-400 leading-relaxed">{description}</p>
         )}
       </div>
     </motion.div>
