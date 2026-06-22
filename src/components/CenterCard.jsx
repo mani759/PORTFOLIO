@@ -1,24 +1,33 @@
+import { motion } from "framer-motion";
 const CenterCard = () => {
   return (
-    <div
+    <motion.div
+      animate={{
+        y: [0, -8, 0],
+      }}
+      transition={{
+        duration: 6,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
       className="
-        w-[420px]
-        h-[260px]
+    w-[420px]
+    h-[260px]
 
-        rounded-3xl
+    rounded-3xl
 
-        border border-white/10
+    border border-white/10
 
-        bg-black/20
-        backdrop-blur-xl
+    bg-black/20
+    backdrop-blur-xl
 
-        flex
-        items-center
-        justify-center
-      "
+    flex
+    items-center
+    justify-center
+  "
     >
       <h2 className="text-white text-2xl font-bold">CENTER CARD</h2>
-    </div>
+    </motion.div>
   );
 };
 

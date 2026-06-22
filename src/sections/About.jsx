@@ -2,6 +2,7 @@ import React from "react";
 import { GridScan } from "../components/backgrounds/BgWhyMe";
 import OrbitCard from "../components/OrbitCard";
 import CenterCard from "../components/CenterCard";
+import { motion } from "framer-motion";
 const About = () => {
   return (
     <section id="about" className="relative min-h-screen   overflow-hidden">
@@ -27,51 +28,177 @@ const About = () => {
           Why Me
         </h2>
         <div className="relative w-[900px]  h-[900px]   mx-auto">
-          <div className=" absolute  left-1/2  top-[45%]  -translate-x-1/2  -translate-y-1/2">
+          <motion.div
+            initial={{
+              opacity: 0,
+              scale: 0.7,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              duration: 0.8,
+            }}
+            className="
+    absolute
+    left-1/2
+    top-[45%]
+    -translate-x-1/2
+    -translate-y-1/2
+  "
+          >
             <CenterCard />
-          </div>
-          <div className="absolute top-[5%]  left-1/2 -translate-x-1/2">
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -40,
+              scale: 0.8,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.3,
+              duration: 0.6,
+            }}
+            className="absolute top-[5%] left-1/2 -translate-x-1/2"
+          >
             <OrbitCard
               title="Card 1"
               description="Placeholder text"
               color="cyan"
             />
-          </div>
-          <div className="absolute top-[18%] left-0">
+          </motion.div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -40,
+              scale: 0.8,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.5,
+              duration: 0.6,
+            }}
+            className="absolute top-[18%] left-0"
+          >
             <OrbitCard
               title="Card 2"
               description="Placeholder text"
               color="purple"
             />
-          </div>
-          <div className="absolute top-[18%] right-0">
+          </motion.div>
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -40,
+              scale: 0.8,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.7,
+              duration: 0.6,
+            }}
+            className="absolute top-[18%] right-0"
+          >
             <OrbitCard
               title="Card 3"
               description="Placeholder text"
               color="emerald"
             />
-          </div>
-          <div className="absolute bottom-[18%] left-0">
+          </motion.div>
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -40,
+              scale: 0.8,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.9,
+              duration: 0.6,
+            }}
+            className="absolute bottom-[18%] left-0"
+          >
             <OrbitCard
               title="Card 4"
               description="Placeholder text"
               color="amber"
             />
-          </div>
-          <div className="absolute bottom-[18%] right-0">
+          </motion.div>
+          <div></div>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -40,
+              scale: 0.8,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 0.0,
+              duration: 0.6,
+            }}
+            className="absolute bottom-[18%] right-0"
+          >
             <OrbitCard
               title="Card 5"
               description="Placeholder text"
               color="rose"
             />
-          </div>
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2">
+          </motion.div>
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -40,
+              scale: 0.8,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+            }}
+            viewport={{ once: true }}
+            transition={{
+              delay: 1.0,
+              duration: 0.6,
+            }}
+            className="absolute bottom-0 left-1/2 -translate-x-1/2"
+          >
             <OrbitCard
               title="Card 6"
               description="Placeholder text"
               color="blue"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
