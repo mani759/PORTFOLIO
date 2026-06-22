@@ -24,9 +24,11 @@ const About = () => {
         />
       </div>
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-white font-bold flex justify-center text-3xl mt-0">
-          Why Me
-        </h2>
+        <div className="mb-20">
+          <h2 className="text-white font-bold flex justify-center text-3xl mt-0">
+            Why Me
+          </h2>
+        </div>
         <div className="relative w-[1000px]  h-[750px]   mx-auto">
           <motion.div
             animate={{
