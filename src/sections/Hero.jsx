@@ -193,7 +193,7 @@ const Hero = () => {
           bottom-0
           left-0
           w-full
-          h-40
+          h-10
           z-20
 
           bg-gradient-to-b
