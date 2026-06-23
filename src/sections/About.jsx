@@ -72,8 +72,8 @@ const About = () => {
       description: (
         <>
           One project{" "}
-          <span className="text-blue-400">better than the last</span>better than
-          the last. That's the goal.
+          <span className="text-blue-400">better than the last </span>better
+          than the last. That's the goal.
         </>
       ),
       color: "blue",
