@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 const ProjectCard = ({ project }) => {
   return (
     <motion.div

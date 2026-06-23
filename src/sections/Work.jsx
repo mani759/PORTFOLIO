@@ -1,8 +1,11 @@
 import RippleGrid from "../components/backgrounds/RippleGrid";
 import React from "react";
 import { motion } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
-
+import TimelineItem from "../components/TimelineItem";
 const Work = () => {
   const projects = [
     {
@@ -41,6 +44,11 @@ const Work = () => {
       github: "#",
     },
   ];
+  const timelineRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start center", "end center"],
+  });
   return (
     <section id="work" className="relative min-h-screen py-32 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full opacity-50 z-0">
@@ -87,15 +95,15 @@ const Work = () => {
             My Journey
           </h2>
         </motion.div>
-        <div className="relative">
+        <div ref={timelineRef} className="relative">
           {projects.map((project, index) => (
-            <div key={project.id} className=" relative  h-[300px]">
-              <div className=" absolute left-1/2  -translate-x-1/2    w-5 h-5   rounded-full bg-yellow-400 shadow-[0_0_20px_rgba(250,204,21,0.8)]   " />
-              {/* Project Card */}
-              <div className="absolute left-0 top-0">
-                <ProjectCard project={project} />
-              </div>
-            </div>
+            <TimelineItem
+              key={project.id}
+              project={project}
+              index={index}
+              total={projects.length}
+              progress={scrollYProgress}
+            />
           ))}
           {/* Center Line */}
           <div
@@ -110,6 +118,23 @@ const Work = () => {
 
               bg-yellow-400/20
             "
+          />
+          <motion.div
+            style={{
+              scaleY: scrollYProgress,
+              transformOrigin: "top",
+            }}
+            className="
+    absolute
+    left-1/2
+    top-0
+    -translate-x-1/2
+
+    h-full
+    w-[2px]
+
+    bg-yellow-400
+  "
           />
         </div>
       </div>
