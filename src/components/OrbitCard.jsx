@@ -45,10 +45,12 @@ const OrbitCard = ({ title, description, color = "cyan", className = "" }) => {
         y: -8,
       }}
       whileTap={{
-        scale: 0.97,
+        scale: 0.94,
       }}
       transition={{
-        duration: 0.3,
+        type: "spring",
+        stiffness: 300,
+        damping: 15,
       }}
       className={`  w-[90vw] max-w-[340px] lg:w-[220px] min-h-[140px]    relative overflow-hidden rounded-2xl  border ${style.border} bg-white/[0.03]   backdrop-blur-xl
          p-5  transition-all  duration-500 hover:border-cyan-400/30 hover:bg-white/[0.05] ${className}  `}

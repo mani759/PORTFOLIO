@@ -21,7 +21,7 @@ const GlassCard = ({ title, items, color, icon, index }) => {
     <motion.div
       whileHover={{
         y: -8,
-        scale: 1.03,
+        scale: 1.1,
       }}
       transition={{
         duration: 0.1,
