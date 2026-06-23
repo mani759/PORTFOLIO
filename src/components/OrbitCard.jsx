@@ -45,7 +45,7 @@ const OrbitCard = ({ title, description, color = "cyan", className = "" }) => {
         y: -8,
       }}
       whileTap={{
-        scale: 0.8,
+        scale: 0.7,
         rotate: 10,
         y: -4,
       }}
