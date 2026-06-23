@@ -77,7 +77,7 @@ const About = () => {
         </>
       ),
       color: "blue",
-      position: "bottom-0 left-1/2 -translate-x-1/2",
+      position: "bottom-[8%] left-1/2 -translate-x-1/2",
     },
   ];
   return (
