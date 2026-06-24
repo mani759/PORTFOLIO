@@ -86,11 +86,21 @@ const Work = () => {
       </motion.div>
       {/* timeline */}
       <div ref={timelineRef} className=" relative mt-35">
-        <motion.div
-          style={{ scaleY: lineScale, transformOrigin: "top" }}
-          className="absolute left-1/2 top-0 -translate-x-1/2
-               w-[2px] h-[1450px]  bg-[#ecd74c]"
-        />
+        <div
+          className="absolute left-1/2 top-0 -translate-x-1/2 overflow-hidden"
+          style={{
+            height: "1100px",
+            width: "2px",
+          }}
+        >
+          <motion.div
+            style={{
+              scaleY: lineScale,
+              transformOrigin: "top",
+            }}
+            className="w-full h-[1500px] bg-[#ecd74c]"
+          />
+        </div>
         {projects.map((project, index) => {
           const isLeft = index % 2 === 0;
           const triggerStart = index * 0.3;
