@@ -1,56 +1,55 @@
 import RippleGrid from "../components/backgrounds/RippleGrid";
-import React from "react";
-import { motion } from "framer-motion";
-import { useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+
 import { useRef } from "react";
-import { useInView } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
-import TimelineItem from "../components/TimelineItem";
+
 const Work = () => {
+  const timelineRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ["start 75%", "end 25%"],
+  });
   const projects = [
     {
       id: 1,
-      title: "Requirement Traceability System",
-
+      title: "Growth Orbit",
       description:
-        "A centralized platform for managing software requirements and maintaining traceability across development phases.",
+        "Digital marketing agency website focused on lead generation, automation, and conversion optimization.",
 
-      demo: "#",
+      github: "https://github.com/yourusername/growth-orbit",
 
-      github: "#",
+      liveDemo: "https://growthorbitdigital.in",
+      tech: ["React", "Tailwind", "Framer Motion"],
     },
 
     {
       id: 2,
       title: "Heart Disease Expert System",
-
       description:
-        "An AI-assisted healthcare recommendation system built using Flask and machine learning concepts.",
+        "AI-powered healthcare dashboard that analyzes patient data and predicts heart disease risk.",
 
-      demo: "#",
+      github: "https://github.com/yourusername/heart-disease-system",
 
-      github: "#",
+      liveDemo: "https://heart-disease-demo.vercel.app",
+      tech: ["React", "Tailwind", "Framer Motion"],
     },
 
     {
       id: 3,
-      title: "Growth Orbit Website",
-
+      title: "Requirement Traceability System",
       description:
-        "A modern agency website focused on performance, animations and user experience.",
+        "Software engineering capstone project for managing requirements and traceability across project lifecycles.",
 
-      demo: "#",
+      github: "https://github.com/yourusername/traceability-system",
 
-      github: "#",
+      liveDemo: "https://traceability-demo.vercel.app",
+      tech: ["React", "Tailwind", "Framer Motion"],
     },
   ];
-  const timelineRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: timelineRef,
-    offset: ["start center", "end center"],
-  });
+  const lineScale = useTransform(scrollYProgress, [0, 1], [0, 1]);
   return (
-    <section id="work" className="relative min-h-screen py-32 overflow-hidden">
+    <section id="work" className="relative py-32 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full opacity-50 z-0">
         <RippleGrid
           enableRainbow={false}
@@ -67,76 +66,69 @@ const Work = () => {
           gridRotation={0}
         />
       </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pointer-events-none">
+      {/* for title............... */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-center"
+      >
+        <p className="uppercase tracking-[0.5em] text-[#a69b5a] text-sm md:text-base mb-6">
+          SELECTED WORKS
+        </p>
+
+        <h2 className="text-5xl md:text-7xl text-white font-bold leading-none">
+          Projects That Shaped
+          <br />
+          My Journey
+        </h2>
+      </motion.div>
+      {/* timeline */}
+      <div ref={timelineRef} className=" relative mt-35">
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 50,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            amount: 0.3,
-          }}
-          transition={{
-            duration: 0.8,
-          }}
-          className="text-center mb-32"
-        >
-          <p className="text-yellow-300 uppercase tracking-[0.35em] text-sm">
-            SELECTED WORKS
-          </p>
+          style={{ scaleY: lineScale, transformOrigin: "top" }}
+          className="absolute left-1/2 top-0 -translate-x-1/2
+               w-[2px] h-[1350px]  bg-[#ecd74c]"
+        />
+        {projects.map((project, index) => {
+          const isLeft = index % 2 === 0;
+          const triggerStart = index * 0.3;
+          const triggerEnd = triggerStart + 0.15;
 
-          <h2 className="mt-4 text-4xl md:text-6xl font-bold text-white">
-            Projects That Shaped
-            <br />
-            My Journey
-          </h2>
-        </motion.div>
-        <div ref={timelineRef} className="relative">
-          {projects.map((project, index) => (
-            <TimelineItem
-              key={project.id}
-              project={project}
-              index={index}
-              total={projects.length}
-              progress={scrollYProgress}
-            />
-          ))}
-          {/* Center Line */}
-          <div
-            className="
-              absolute
-              left-1/2
-              top-0
-              -translate-x-1/2
+          const cardOpacity = useTransform(
+            scrollYProgress,
+            [triggerStart, triggerEnd],
+            [0, 1],
+          );
+          const cardX = useTransform(
+            scrollYProgress,
+            [triggerStart, triggerEnd],
+            [isLeft ? -120 : 120, 0],
+          );
 
-              h-full
-              w-[2px]
+          return (
+            <motion.div key={project.id} className="relative h-[550px]">
+              {/* Dot */}
+              <motion.div className=" absolute left-1/2 top-0 -translate-x-1/2  w-5  h-5 rounded-full bg-[#ecd74c]   shadow-[0_0_20px_rgba(236,215,76,0.8)]  " />
 
-              bg-yellow-400/20
-            "
-          />
-          <motion.div
-            style={{
-              scaleY: scrollYProgress,
-              transformOrigin: "top",
-            }}
-            className="
-    absolute
-    left-1/2
-    top-0
-    -translate-x-1/2
-
-    h-full
-    w-[2px]
-
-    bg-yellow-400
-  "
-          />
-        </div>
+              {/* Card */}
+              <motion.div
+                style={{
+                  opacity: cardOpacity,
+                  x: cardX,
+                }}
+                className={`w-1/2 ${
+                  isLeft
+                    ? "pr-16 flex justify-end"
+                    : "ml-auto pl-16 flex justify-start"
+                }`}
+              >
+                <ProjectCard project={project} />
+              </motion.div>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );
