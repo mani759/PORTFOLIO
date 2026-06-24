@@ -89,7 +89,7 @@ const Work = () => {
         <motion.div
           style={{ scaleY: lineScale, transformOrigin: "top" }}
           className="absolute left-1/2 top-0 -translate-x-1/2
-               w-[2px] h-[1370px]  bg-[#ecd74c]"
+               w-[2px] h-[1450px]  bg-[#ecd74c]"
         />
         {projects.map((project, index) => {
           const isLeft = index % 2 === 0;
