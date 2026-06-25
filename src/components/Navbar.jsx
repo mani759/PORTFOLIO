@@ -29,7 +29,9 @@ const Navbar = () => {
           </a>
         </div>
         <div>
-          <Button text="Contact Me" />
+          <a href="mailto:manikantagurram5533@example.com">
+            <Button text="Contact Me" />
+          </a>
         </div>
       </div>
     </nav>
