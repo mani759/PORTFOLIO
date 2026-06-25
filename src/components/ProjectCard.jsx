@@ -28,10 +28,38 @@ const ProjectCard = ({ project }) => {
       <p className="text-white/55 leading-relaxed text-sm mb-6">
         {project.description}
       </p>
+      {/* Tech Stack */}
+      <div className="flex flex-wrap gap-2 mb-6">
+        {project.tech.map((tech) => (
+          <span
+            key={tech}
+            className="
+        px-3
+        py-1
+        rounded-full
+        text-xs
+        font-medium
+        bg-yellow-400/10
+        border
+        border-yellow-400/20
+        text-yellow-300
+      "
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
 
       {/* Buttons */}
       <div className="flex flex-col sm:flex-row gap-3">
         <motion.a
+          whileHover={{
+            scale: 1.05,
+            y: -2,
+          }}
+          whileTap={{
+            scale: 0.94,
+          }}
           href={project.liveDemo}
           target="_blank"
           rel="noreferrer"
@@ -48,6 +76,13 @@ const ProjectCard = ({ project }) => {
         </motion.a>
 
         <motion.a
+          whileHover={{
+            scale: 1.05,
+            y: -2,
+          }}
+          whileTap={{
+            scale: 0.94,
+          }}
           href={project.github}
           target="_blank"
           rel="noreferrer"

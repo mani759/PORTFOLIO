@@ -37,7 +37,7 @@ const IntroCard = () => {
             transition={{ duration: 0.4 }}
             className="mt-5"
           >
-            <a href="public\resume.pdf" target="_blank">
+            <a href="/resume.pdf" target="_blank">
               <Button text=" 📄 My Resume" />
             </a>
           </motion.div>

@@ -4,7 +4,7 @@ const SocialLinks = () => {
   return (
     <div className="flex gap-4 mt-6">
       <a
-        href="www.linkedin.com/in/manikanta-gurram-707145326"
+        href="https://www.linkedin.com/in/manikanta-gurram-707145326"
         target="_blank"
         rel="noreferrer"
         className="

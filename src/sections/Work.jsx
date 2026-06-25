@@ -13,38 +13,46 @@ const Work = () => {
   const projects = [
     {
       id: 1,
-      title: "Growth Orbit",
+      title: "StudySync",
       description:
-        "Digital marketing agency website focused on lead generation, automation, and conversion optimization.",
+        "A student productivity web app that combines a Pomodoro timer, task management, study analytics, and a calendar in one place. Built with Firebase Authentication and Firestore to securely manage user accounts and study data.",
 
-      github: "https://github.com/yourusername/growth-orbit",
+      github: "https://github.com/mani759/studysync",
 
-      liveDemo: "https://growthorbitdigital.in",
-      tech: ["React", "Tailwind", "Framer Motion"],
+      liveDemo: "https://studysync-vw4s.onrender.com",
+      tech: ["HTML", "CSS", "JavaScript", "Firebase Auth", "Firestore"],
     },
 
     {
       id: 2,
-      title: "Heart Disease Expert System",
+      title: "MindMate",
       description:
-        "AI-powered healthcare dashboard that analyzes patient data and predicts heart disease risk.",
+        "A personal AI companion that lets users have meaningful conversations through a modern chat interface. Features secure authentication, multiple chat sessions, and cloud-based chat history using Firebase and Firestore.",
 
-      github: "https://github.com/yourusername/heart-disease-system",
+      github: "https://github.com/mani759/MindMate",
 
-      liveDemo: "https://heart-disease-demo.vercel.app",
-      tech: ["React", "Tailwind", "Framer Motion"],
+      liveDemo: "https://mindmate-7eqw.onrender.com",
+      tech: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Flask",
+        "Firebase Auth",
+        "Firestore",
+        "OpenRouter API",
+      ],
     },
 
     {
       id: 3,
-      title: "Requirement Traceability System",
+      title: "LeadHunt",
       description:
-        "Software engineering capstone project for managing requirements and traceability across project lifecycles.",
+        "A lead generation platform that helps businesses create high-converting landing pages and capture customer leads through a simple and intuitive interface. Designed with a focus on usability, responsive design, and conversion-focused workflows.",
 
-      github: "https://github.com/yourusername/traceability-system",
+      github: "https://github.com/mani759/leads_capture",
 
-      liveDemo: "https://traceability-demo.vercel.app",
-      tech: ["React", "Tailwind", "Framer Motion"],
+      liveDemo: "https://captur-lead.onrender.com",
+      tech: ["HTML", "CSS", "JavaScript", "Flask"],
     },
   ];
   const lineScale = useTransform(scrollYProgress, [0, 1], [0, 1]);
@@ -78,7 +86,7 @@ const Work = () => {
           SELECTED WORKS
         </p>
 
-        <h2 className="text-5xl md:text-7xl text-white font-bold leading-none">
+        <h2 className="text-[2.5rem] md:text-7xl text-white font-bold leading-[0.95]">
           Projects That Shaped
           <br />
           My Journey
@@ -127,6 +135,18 @@ const Work = () => {
                 style={{
                   opacity: cardOpacity,
                   x: cardX,
+                }}
+                whileHover={{
+                  y: -8,
+                  scale: 1.02,
+                }}
+                whileTap={{
+                  scale: 0.98,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 260,
+                  damping: 18,
                 }}
                 className={` w-full  flex   justify-center md:w-1/2   ${isLeft ? "md:pr-16 md:justify-end" : "md:ml-auto md:pl-16 md:justify-start"}`}
               >
