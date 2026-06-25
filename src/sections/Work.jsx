@@ -128,11 +128,7 @@ const Work = () => {
                   opacity: cardOpacity,
                   x: cardX,
                 }}
-                className={`w-1/2 ${
-                  isLeft
-                    ? "pr-16 flex justify-end"
-                    : "ml-auto pl-16 flex justify-start"
-                }`}
+                className={` w-full  flex   justify-center md:w-1/2   ${isLeft ? "md:pr-16 md:justify-end" : "md:ml-auto md:pl-16 md:justify-start"}`}
               >
                 <ProjectCard project={project} />
               </motion.div>

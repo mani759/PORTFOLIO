@@ -4,11 +4,13 @@ const ProjectCard = ({ project }) => {
   return (
     <motion.div
       className="
-        w-[420px]
+        w-full max-w-[320px] md:max-w-[420px]
+
+
         rounded-3xl
         border border-yellow-400/20
         bg-black/80
-        p-7
+        p-5 md:p-7
         shadow-[0_0_20px_rgba(250,204,21,0.05)]
       "
     >
@@ -18,7 +20,7 @@ const ProjectCard = ({ project }) => {
       </p>
 
       {/* Title */}
-      <h3 className="text-4xl font-bold text-white leading-tight mb-4">
+      <h3 className="text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
         {project.title}
       </h3>
 
@@ -28,7 +30,7 @@ const ProjectCard = ({ project }) => {
       </p>
 
       {/* Buttons */}
-      <div className="flex items-center gap-3">
+      <div className="flex flex-col sm:flex-row gap-3">
         <motion.a
           href={project.liveDemo}
           target="_blank"
