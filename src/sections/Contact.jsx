@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="relative overflow-hidden min-h-[90vh] flex items-center justify-center -mt-15 px-6 py-28"
+      className="relative overflow-hidden  flex items-center justify-center -mt-15 px-6 py-18"
     >
       {/* Pixel Background */}
       <div className="absolute inset-0 z-0">
@@ -126,7 +126,7 @@ const Contact = () => {
         </div>
 
         {/* Footer */}
-        <div className="mt-20 border-t border-white/10 pt-8">
+        <div className="mt-12 mb-0 border-t border-white/10 pt-6">
           <p className="text-white/35 text-sm tracking-wide">
             © 2026 Manikanta Gurram · Crafted with React, Tailwind CSS & Framer
             Motion.
